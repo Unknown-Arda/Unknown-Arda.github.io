@@ -1,0 +1,45 @@
+Ideas for the future {
+  
+    - Abilities : Some Block will be placed and it will give you some Abilities if you pick it up
+        - Score [ + 10 ]
+        - Gold  [ + 10 ]
+        - Speed
+        - Freeze oppnent
+        - Teleport { hard }
+    [ Interval + Math.random ]
+
+    - Rotating : Player should rotate
+    [ document.getElementById | window.addEventListener ]
+    
+    - Shop
+        -Scroling system to add more skins
+        - More Skins : Skins that you can buy and select
+            - Different colored skins
+            - expensiv epic skins
+        [ Draw epic skins | Colored Skins wth CSS ]
+    [  ]
+
+    - Move across
+        -wa; 
+        -wd; 
+        -sd; 
+        -sa;
+    [ window.addEventListener ]
+
+    - Make the code simple
+        - Short the ifs
+            - gold
+            - kill player
+        - Some Functions should just be triggered if the player is moving
+
+    - Add database
+    [ hard ]
+}
+
+Problems (){
+    - After the word switching de <p> are moving.
+
+    - Black div cant run faster
+        - add var Health to the player
+        - add Health bar for the player
+}
