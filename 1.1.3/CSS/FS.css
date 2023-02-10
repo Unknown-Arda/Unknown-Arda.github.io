@@ -1,0 +1,27 @@
+body {
+
+    background-color:rgb(42, 100, 49);
+}
+
+.goldValue {
+
+    color:aliceblue;
+    font-size: x-large;
+    margin-left: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.stats-shop {
+
+    background-color: rgb(25, 65, 30);
+    padding: 9px;
+    left: 50%;
+    width: 918px;
+    position: absolute;
+    transform: translate(-50%);
+}
+
+.statsHR {
+
+    margin-bottom:  20px;
+}
