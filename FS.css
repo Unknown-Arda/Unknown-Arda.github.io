@@ -1,0 +1,123 @@
+body {
+
+    background-color:rgb(42, 100, 49);
+}
+
+.gameBorder {
+
+        width: 720px;
+        height: 480px;
+        zoom:130%;
+        background-color: rgb(69, 153, 80);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+}
+
+.player{
+
+    background-color: azure;
+    width: 20px;
+    height: 20px;
+    left:10px;
+    top:10px;
+    position: absolute;
+}
+
+.gold{
+
+    background-color: gold;
+    width: 10px;
+    height: 10px;
+    left: 10px;
+    position: absolute;
+}
+
+.goldValue {
+
+    color:aliceblue;
+    font-size: x-large;
+    margin-left: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.stats {
+
+    background-color: rgb(25, 65, 30);
+    padding: 9px;
+    left: 50%;
+    width: 920px;
+    position: absolute;
+    transform: translate(-50%);
+}
+
+.opponent {
+
+    background-color: rgb(0, 0, 0);
+    width: 20px;
+    height: 20px;
+    left:690px;
+    top:450px;
+    position: absolute;
+}
+
+.whiteSkin {
+
+    height: 20px;
+    width: 20px;
+    zoom: 130%;
+    margin-left:50px;
+    background-color:aliceblue;
+    border:none;
+
+}.whiteSkin:hover {
+
+    cursor:pointer;
+    
+}.white {
+
+    color:aliceblue;
+    margin-left: 58px;
+    display: inline;
+}
+
+.blueSkin {
+
+    height: 20px;
+    width: 20px;
+    zoom: 130%;
+    margin-left:50px;
+    background-color: rgb(96, 195, 235);
+    border:none;
+
+}.blueSkin:hover {
+
+    cursor:pointer;
+
+}.blue {
+
+    color:aliceblue;
+    margin-left: 45px;
+    display: inline;
+}
+
+.pinkSkin {
+
+    height: 20px;
+    width: 20px;
+    zoom: 130%;
+    margin-left:50px;
+    background-color: rgb(235, 96, 228);
+    border:none;
+
+}.pinkSkin:hover {
+
+    cursor:pointer;
+
+}.pink {
+
+    color:aliceblue;
+    margin-left: 38px;
+    display: inline;
+}
