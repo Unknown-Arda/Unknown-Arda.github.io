@@ -12,7 +12,7 @@
 
 .player{
 
-    background-image: url(./Desgins/Skins/whiteSkin.png);
+    background-image: url(../Desgins/Skins/whiteSkin.png);
     background-size: cover;
     image-rendering: pixelated;
     width: 20px;
@@ -26,7 +26,7 @@
 
 .gold{
 
-    background-image: url(./Desgins/gold.png);
+    background-image: url(../Desgins/gold.png);
     background-size: cover;
     image-rendering: pixelated;
     width: 10px;
@@ -47,7 +47,7 @@
 
 .bullet {
 
-    background-image: url(./Desgins/bullet.png);
+    background-image: url(../Desgins/bullet.png);
     background-size: cover;
     image-rendering: pixelated;
     width: 10px;
