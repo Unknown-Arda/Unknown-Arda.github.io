@@ -42,14 +42,6 @@
     position: absolute;
 }
 
-.invisibleBulletDiv1 {
-
-    background-color: rgb(255, 0, 0);
-    width: 10px;
-    height: 10px;
-    left: 0px
-}
-
 .bullet {
 
     background-color: rgb(66, 66, 66) ;
