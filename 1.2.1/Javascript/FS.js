@@ -133,4 +133,4 @@ let intervalOpponentMovement = setInterval(() => {
   if (opponentPositionY < playerPositionY) {
     document.getElementById("opponent").style.left = opponentPositionY + 10 + 'px';
   }
-}, 1000);
+}, 300);
