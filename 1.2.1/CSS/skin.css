@@ -1,0 +1,101 @@
+.whiteSkin {
+
+    height: 20px;
+    width: 20px;
+    zoom: 130%;
+    margin-left:30px;
+    background-color:rgb(255, 240, 240);
+    border:none;
+
+}.whiteSkin:hover {
+
+    cursor:pointer;
+    
+}.white {
+
+    color:aliceblue;
+    margin-left: 33px;
+    display: inline;
+}
+
+.blueSkin {
+
+    height: 20px;
+    width: 20px;
+    zoom: 130%;
+    margin-left:50px;
+    background-color: rgb(96, 195, 235);
+    border:none;
+
+}.blueSkin:hover {
+
+    cursor:pointer;
+
+}.blue {
+
+    color:aliceblue;
+    margin-left: 45px;
+    display: inline;
+}
+
+.pinkSkin {
+
+    height: 20px;
+    width: 20px;
+    zoom: 130%;
+    margin-left:50px;
+    background-color: rgb(235, 96, 228);
+    border:none;
+
+}.pinkSkin:hover {
+
+    cursor:pointer;
+
+}.pink {
+
+    color:aliceblue;
+    margin-left: 38px;
+    display: inline;
+}
+
+.redSkin {
+
+    height: 20px;
+    width: 20px;
+    zoom: 130%;
+    margin-left:50px;
+    background-color: rgb(211, 77, 77);
+    border:none;
+
+}.redSkin:hover {
+
+    cursor:pointer;
+
+}.red {
+
+    color:aliceblue;
+    margin-left: 38px;
+    display: inline;
+}
+
+.dogSkin {
+
+    height: 20px;
+    width: 20px;
+    zoom: 130%;
+    margin-left:50px;
+    background-image: url(../Andere/dogSkin.png);
+    background-size: cover;
+    image-rendering: pixelated;
+    border:none;
+
+}.dogSkin:hover {
+
+    cursor:pointer;
+
+}.dog {
+
+    color:aliceblue;
+    margin-left: 37px;
+    display: inline;
+}
