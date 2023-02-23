@@ -80,7 +80,7 @@ setInterval(() => {
 
     // jewel probability 
     if (score > 12) {
-        ScoreProbability = 2;
+        ScoreProbability = 10;
     } 
     if (score > 24) {
         ScoreProbability = 9;
