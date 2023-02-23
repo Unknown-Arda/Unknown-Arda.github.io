@@ -1,0 +1,39 @@
+body {
+
+    background-color:rgb(42, 100, 49);
+}
+
+.stats-shop {
+
+    background-color: rgb(25, 65, 30);
+    padding: 9px;
+    left: 50%;
+    top:10px;
+    width: 918px;
+    position: absolute;
+    transform: translate(-50%);
+}
+
+.goldValue {
+
+    color:aliceblue;
+    font-size: x-large;
+    margin-left: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.statsHR {
+
+    margin-bottom:  20px;
+}
+
+.bulletSpawner {
+
+    background-color: rgb(110, 110, 110);
+    height: 22px;
+    width: 30px;
+    position: absolute;
+    left:700px;
+    top: 498px;
+    z-index: 1;
+}
