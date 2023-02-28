@@ -58,10 +58,11 @@ let opponentPositionY;
 let score = 0;
 let gold = 0;
 let score1 = 0;
-
+let score10 = 0;
+let highscore = 0;
 let intervalSpeed = 400;
 let intervalId = setInterval(oppnentChasingYou, intervalSpeed);
-
+let opponentTempo = 0;
 
 setInterval(() => {
 
@@ -93,6 +94,10 @@ setInterval(() => {
     changeIntervalSpeed5()
   }
 
+  if(score10 = 10) {
+    score10 = 0; // Change!!!!!!!!!!!!
+  }
+
   // Dying if the opponent chatches you
   if (playerPositionX + 10 == opponentPositionX && playerPositionY + 10 == opponentPositionY
     || playerPositionX + 10 == opponentPositionX && playerPositionY - 10 == opponentPositionY
@@ -103,12 +108,20 @@ setInterval(() => {
     || playerPositionX == opponentPositionX && playerPositionY + 10 == opponentPositionY
     || playerPositionX + 10 == opponentPositionX && playerPositionY == opponentPositionY
   ) {
-    location.reload();
+    gameOver();
   }
 
-  // Update stats: [ gold | score ]
+  // Update stats: [ gold | score | highscore | Tempo ]
   document.getElementById("goldValue").innerHTML = "GOLD : " + gold;
   document.getElementById("scoreValue").innerHTML = "SCORE : " + score;
+  document.getElementById("highscoreValue").innerHTML = "HIGHSCORE : "+ highscore;
+  document.getElementById("tempoValue").innerHTML = "Tempo : "+ opponentTempo;
+
+  if (score > highscore) {
+    highscore = score;
+  }
+
+  opponentTempo = (400 / intervalSpeed * 100).toFixed(2);
 
 }, 15);
 

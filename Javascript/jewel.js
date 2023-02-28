@@ -1,7 +1,6 @@
 // Creates variable : [ jewelProbability | canJuwelTeleport | ScoreProbability ]
 let jewelProbability = 0;
 let canJuwelTeleport = true;
-let ScoreProbability = 11;
 let score5 = 0;
 
 // Places the jewel [ Generates variable with random cordinates in the matchfield to place them random ]
@@ -14,7 +13,7 @@ function placeJewel() {
 
 // Generates a jewel probability
 function generateJewelLuck() {
-    jewelProbability = Math.floor(Math.random() * ScoreProbability);
+    jewelProbability = Math.floor(Math.random() * 7);
 }
 
 setInterval(() => {
@@ -76,20 +75,6 @@ setInterval(() => {
     if (jewelAnim == 4) {
         document.getElementById("jewel").style.backgroundImage = "url(./Desgins/jewel.anim/jewelanim4.png)";
         jewelAnim = -2;
-    }
-
-    // jewel probability 
-    if (score > 12) {
-        ScoreProbability = 10;
-    } 
-    if (score > 24) {
-        ScoreProbability = 9;
-    } 
-    if (score > 49) {
-        ScoreProbability = 8;
-    } 
-    if (score > 99) {
-        ScoreProbability = 7;
     }
 
 }, 200);

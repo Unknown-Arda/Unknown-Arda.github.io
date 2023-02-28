@@ -60,7 +60,7 @@ setInterval(() => {
         || bullet4PositionX - 10 == playerPositionY && bullet4PositionY == playerPositionX
         || bullet4PositionX == playerPositionY && bullet4PositionY - 10 == playerPositionX
     ) {
-        location.reload()
+        gameOver();
     }
 
 }, 20);

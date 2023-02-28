@@ -19,6 +19,12 @@ function updateJewelPosition() {
     jewelPositionY = document.getElementById("jewel").offsetLeft;
 }
 
+function
+    updateFCPosition() {
+    FCPositionX = document.getElementById("FC").offsetTop;
+    FCPositionY = document.getElementById("FC").offsetLeft;
+}
+
 // updates Position [ bullet1 | bullet2 | bullet3 | bullet4 | bullet5 ]
 function updateBulletPosition() {
     bulletPositionX = document.getElementById("bullet1").offsetLeft;
