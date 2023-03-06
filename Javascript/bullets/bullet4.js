@@ -33,23 +33,26 @@ setInterval(() => {
         generateRandombullet4PositionY();
     }
 
-    // Container 03
-    if (bullet4PositionY - 10 > randomY4 && score > 79) { // change
-        bullet4PositionY -= 10;
-        document.getElementById("bullet4").style.top = bullet4PositionY + "px";
-    } if (bullet4PositionY - 10 < randomY4) {
-        bullet4PositionY += 10;
-        document.getElementById("bullet4").style.top = bullet4PositionY + "px";
+    if (openNameList == false) {
+        // Container 03
+        if (bullet4PositionY - 10 > randomY4 && score > 79) {
+            bullet4PositionY -= 10;
+            document.getElementById("bullet4").style.top = bullet4PositionY + "px";
+        } if (bullet4PositionY - 10 < randomY4) {
+            bullet4PositionY += 10;
+            document.getElementById("bullet4").style.top = bullet4PositionY + "px";
+        }
+
+        // Container 04
+        if (bullet4PositionY - 10 == randomY4 && bullet4R == true) {
+            bullet4PositionX -= 10
+            document.getElementById("bullet4").style.left = bullet4PositionX + "px";
+        } if (bullet4PositionY - 10 == randomY4 && bullet4L == true) {
+            bullet4PositionX += 10
+            document.getElementById("bullet4").style.left = bullet4PositionX + "px";
+        }
     }
 
-    // Container 04
-    if (bullet4PositionY - 10 == randomY4 && bullet4R == true) {
-        bullet4PositionX -= 10
-        document.getElementById("bullet4").style.left = bullet4PositionX + "px";
-    } if (bullet4PositionY - 10 == randomY4 && bullet4L == true) {
-        bullet4PositionX += 10
-        document.getElementById("bullet4").style.left = bullet4PositionX + "px";
-    }
 
 }, 80);
 

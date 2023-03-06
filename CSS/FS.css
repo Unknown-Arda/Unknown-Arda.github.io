@@ -96,3 +96,17 @@ body {
     margin-bottom: 1%;
     padding:3px;
 }
+
+.pressF2 {
+
+    color:rgb(183, 250, 187);
+    font-size: 9px;
+    margin-left: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin:10px;
+    background-color: rgb(34, 82, 41);
+    position: absolute;
+    right:0;
+    top: 40%;
+    padding: 4px;
+}

@@ -1,5 +1,7 @@
 placeGold();
 
+let openNameList = false;
+
 // Movement [ Player ]
 let player = document.getElementById('player');
 let movePlayer = 10;
@@ -7,18 +9,25 @@ window.addEventListener('keydown', (e) => {
   let leftpos = parseInt(window.getComputedStyle(player).getPropertyValue("left"));
   let toppos = parseInt(window.getComputedStyle(player).getPropertyValue("top"));
 
+  if (!openNameList) {
+    switch (e.key) {
+      case 'a':
+        player.style.left = leftpos - movePlayer + 'px';
+        break;
+      case 'd':
+        player.style.left = leftpos + movePlayer + 'px';
+        break;
+      case 'w':
+        player.style.top = toppos - movePlayer + 'px';
+        break;
+      case 's':
+        player.style.top = toppos + movePlayer + 'px';
+    }
+  }
+
   switch (e.key) {
-    case 'a':
-      player.style.left = leftpos - movePlayer + 'px';
-      break;
-    case 'd':
-      player.style.left = leftpos + movePlayer + 'px';
-      break;
-    case 'w':
-      player.style.top = toppos - movePlayer + 'px';
-      break;
-    case 's':
-      player.style.top = toppos + movePlayer + 'px';
+    case 'F2':
+      ChangeName()
   }
 
   // Border [ Player ]
@@ -58,6 +67,7 @@ let opponentPositionY;
 let score = 0;
 let gold = 0;
 let score1 = 0;
+let score5 = 0;
 let score10 = 0;
 let highscore = 0;
 let intervalSpeed = 400;
@@ -94,7 +104,7 @@ setInterval(() => {
     changeIntervalSpeed5()
   }
 
-  if(score10 = 10) {
+  if (score10 = 10) {
     score10 = 0; // Change!!!!!!!!!!!!
   }
 
@@ -114,8 +124,8 @@ setInterval(() => {
   // Update stats: [ gold | score | highscore | Tempo ]
   document.getElementById("goldValue").innerHTML = "GOLD : " + gold;
   document.getElementById("scoreValue").innerHTML = "SCORE : " + score;
-  document.getElementById("highscoreValue").innerHTML = "HIGHSCORE : "+ highscore;
-  document.getElementById("tempoValue").innerHTML = "Tempo : "+ opponentTempo;
+  document.getElementById("highscoreValue").innerHTML = "HIGHSCORE : " + highscore;
+  document.getElementById("tempoValue").innerHTML = "Tempo : " + opponentTempo;
 
   if (score > highscore) {
     highscore = score;
@@ -127,17 +137,19 @@ setInterval(() => {
 
 // Makes the opponent following you
 function oppnentChasingYou() {
-  if (opponentPositionX > playerPositionX) {
-    document.getElementById("opponent").style.top = opponentPositionX - 10 + 'px';
-  }
-  if (opponentPositionX < playerPositionX) {
-    document.getElementById("opponent").style.top = opponentPositionX + 10 + 'px';
-  }
-  if (opponentPositionY > playerPositionY) {
-    document.getElementById("opponent").style.left = opponentPositionY - 10 + 'px';
-  }
-  if (opponentPositionY < playerPositionY) {
-    document.getElementById("opponent").style.left = opponentPositionY + 10 + 'px';
+  if (openNameList == false) {
+    if (opponentPositionX > playerPositionX) {
+      document.getElementById("opponent").style.top = opponentPositionX - 10 + 'px';
+    }
+    if (opponentPositionX < playerPositionX) {
+      document.getElementById("opponent").style.top = opponentPositionX + 10 + 'px';
+    }
+    if (opponentPositionY > playerPositionY) {
+      document.getElementById("opponent").style.left = opponentPositionY - 10 + 'px';
+    }
+    if (opponentPositionY < playerPositionY) {
+      document.getElementById("opponent").style.left = opponentPositionY + 10 + 'px';
+    }
   }
 }
 

@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div class="version">Version: 1.4.1</div>
+    <div class="version">Version: 1.4.2</div>
 
     <header class="stats-shop">
 
@@ -21,6 +21,7 @@
         <div id="scoreValue" class="statsScore">SCORE :</div> 
         <div id="highscoreValue" class="statsHighScore">HIGHSCORE :</div>
         <div id="tempoValue" class="statsTempo"></div>
+        <div class="pressF2">Press F2 to change your Name!</div>
         <hr class="statsHR">
 
         <div class="whiteDiv">
@@ -53,7 +54,9 @@
     </header>
 
     <div class="gameBorder">
-        <div id="player" class="player"></div>
+        <div id="player" class="player">
+            <h6 id="playerName"></h6>
+        </div>
         <div id="gold" class="gold"></div>
         <div class="jewel" id="jewel"></div>
         <div class="flyingCoin" id="FC"></div>
@@ -64,6 +67,13 @@
         <div class="bullet" id="bullet3"></div>
         <div class="bullet" id="bullet4"></div>
         <div class="bullet" id="bullet5"></div>
+
+        <div class="nameTag" id="nameTagDiv">
+            <h1 class="nameTagTitle">Game Tag:</h1>
+            <label for="nameTag"></label>
+            <input type="text" id="nameTag" name="nameTag">
+        </div>
+
     </div>
 
 </body>
@@ -85,3 +95,4 @@
 <script src="./Javascript/bullets/bullet5.js"></script>
 <script src="./Javascript/updatePosition.js"></script>
 <script src="./Javascript/gameOver.js"></script>
+<script src="/Javascript/changeName.js"></script>

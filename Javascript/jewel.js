@@ -1,7 +1,6 @@
 // Creates variable : [ jewelProbability | canJuwelTeleport | ScoreProbability ]
 let jewelProbability = 0;
 let canJuwelTeleport = true;
-let score5 = 0;
 
 // Places the jewel [ Generates variable with random cordinates in the matchfield to place them random ]
 function placeJewel() {

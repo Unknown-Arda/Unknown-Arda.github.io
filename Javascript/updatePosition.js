@@ -19,8 +19,7 @@ function updateJewelPosition() {
     jewelPositionY = document.getElementById("jewel").offsetLeft;
 }
 
-function
-    updateFCPosition() {
+function updateFCPosition() {
     FCPositionX = document.getElementById("FC").offsetTop;
     FCPositionY = document.getElementById("FC").offsetLeft;
 }

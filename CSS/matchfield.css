@@ -81,3 +81,42 @@
     top: 500px;
     position: absolute;
 }
+
+.nameTag {
+
+    background-color:rgb(120, 148, 124);
+    width: 288px;
+    height: 192px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border: 7.5px dashed rgb(0, 0, 0);
+    display: none;
+}
+
+input {
+
+    top: 37.5%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.nameTagTitle {
+
+    font-size: 20px;
+    top: 17.5%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-family: fantasy;
+}
+
+h6 {
+
+    left: 50%;
+    top: -175%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
