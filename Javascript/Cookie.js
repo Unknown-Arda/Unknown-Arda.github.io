@@ -147,5 +147,4 @@ function saveScore() {
 
   // own red
   setScore("usernameSAVED", username);
-  console.log("save name:" + username);
 }
