@@ -1,33 +1,42 @@
 placeGold();
 
 let openNameList = false;
+let walkingValue = 0;
 
 // Movement [ Player ]
-let player = document.getElementById('player');
+let player = document.getElementById("player");
 let movePlayer = 10;
-window.addEventListener('keydown', (e) => {
-  let leftpos = parseInt(window.getComputedStyle(player).getPropertyValue("left"));
-  let toppos = parseInt(window.getComputedStyle(player).getPropertyValue("top"));
+window.addEventListener("keydown", (e) => {
+  let leftpos = parseInt(
+    window.getComputedStyle(player).getPropertyValue("left")
+  );
+  let toppos = parseInt(
+    window.getComputedStyle(player).getPropertyValue("top")
+  );
 
   if (!openNameList) {
     switch (e.key) {
-      case 'a':
-        player.style.left = leftpos - movePlayer + 'px';
+      case "a":
+        walkingValue += 1;
+        player.style.left = leftpos - movePlayer + "px";
         break;
-      case 'd':
-        player.style.left = leftpos + movePlayer + 'px';
+      case "d":
+        walkingValue += 1;
+        player.style.left = leftpos + movePlayer + "px";
         break;
-      case 'w':
-        player.style.top = toppos - movePlayer + 'px';
+      case "w":
+        walkingValue += 1;
+        player.style.top = toppos - movePlayer + "px";
         break;
-      case 's':
-        player.style.top = toppos + movePlayer + 'px';
+      case "s":
+        walkingValue += 1;
+        player.style.top = toppos + movePlayer + "px";
     }
   }
 
   switch (e.key) {
-    case 'F2':
-      ChangeName()
+    case "F2":
+      ChangeName();
   }
 
   // Border [ Player ]
@@ -35,24 +44,29 @@ window.addEventListener('keydown', (e) => {
   let top = parseInt(document.getElementById("player").style.top);
   if (left < 0) {
     document.getElementById("player").style.left = "0px";
+    walkingValue -= 1;
   }
   if (left > 700) {
     document.getElementById("player").style.left = "700px";
+    walkingValue -= 1;
   }
   if (top < 0) {
     document.getElementById("player").style.top = "0px";
+    walkingValue -= 1;
   }
   if (top > 460) {
     document.getElementById("player").style.top = "460px";
+    walkingValue -= 1;
   }
+  
 });
 
 // Places the gold [ Generates variable with random cordinates in the matchfield to place them random ]
 function placeGold() {
   let randomX = Math.floor(Math.random() * 47) * 10;
   let randomY = Math.floor(Math.random() * 71) * 10;
-  document.getElementById("gold").style.top = randomX + 'px';
-  document.getElementById("gold").style.left = randomY + 'px';
+  document.getElementById("gold").style.top = randomX + "px";
+  document.getElementById("gold").style.left = randomY + "px";
 }
 
 // Creates variable ( X & Y ) : [ player | gold | opponent ]
@@ -82,41 +96,54 @@ setInterval(() => {
   updateOpponentPosition();
 
   // Adds the Variable 1 more unit if you pick the gold up : [ gold | score | score5 ]
-  if (goldPositionX === playerPositionX && goldPositionY === playerPositionY
-    || playerPositionX + 10 == goldPositionX && playerPositionY == goldPositionY
-    || playerPositionX + 10 == goldPositionX && playerPositionY + 10 == goldPositionY
-    || playerPositionX == goldPositionX && playerPositionY + 10 == goldPositionY
+  if (
+    (goldPositionX === playerPositionX && goldPositionY === playerPositionY) ||
+    (playerPositionX + 10 == goldPositionX &&
+      playerPositionY == goldPositionY) ||
+    (playerPositionX + 10 == goldPositionX &&
+      playerPositionY + 10 == goldPositionY) ||
+    (playerPositionX == goldPositionX && playerPositionY + 10 == goldPositionY)
   ) {
     placeGold();
     gold += 1;
     score += 1;
     score1 += 1;
+    saveScore();
   }
 
   if (score1 == 1) {
     score1 = 0;
-    generateJewelLuck()
-    changeIntervalSpeed()
+    generateJewelLuck();
+    changeIntervalSpeed();
   }
 
   if (score5 == 5) {
     score5 = 0;
-    changeIntervalSpeed5()
+    changeIntervalSpeed5();
   }
 
-  if (score10 = 10) {
+  if ((score10 = 10)) {
     score10 = 0; // Change!!!!!!!!!!!!
   }
 
   // Dying if the opponent chatches you
-  if (playerPositionX + 10 == opponentPositionX && playerPositionY + 10 == opponentPositionY
-    || playerPositionX + 10 == opponentPositionX && playerPositionY - 10 == opponentPositionY
-    || playerPositionX - 10 == opponentPositionX && playerPositionY + 10 == opponentPositionY
-    || playerPositionX - 10 == opponentPositionX && playerPositionY - 10 == opponentPositionY
-    || playerPositionX == opponentPositionX && playerPositionY - 10 == opponentPositionY
-    || playerPositionX - 10 == opponentPositionX && playerPositionY == opponentPositionY
-    || playerPositionX == opponentPositionX && playerPositionY + 10 == opponentPositionY
-    || playerPositionX + 10 == opponentPositionX && playerPositionY == opponentPositionY
+  if (
+    (playerPositionX + 10 == opponentPositionX &&
+      playerPositionY + 10 == opponentPositionY) ||
+    (playerPositionX + 10 == opponentPositionX &&
+      playerPositionY - 10 == opponentPositionY) ||
+    (playerPositionX - 10 == opponentPositionX &&
+      playerPositionY + 10 == opponentPositionY) ||
+    (playerPositionX - 10 == opponentPositionX &&
+      playerPositionY - 10 == opponentPositionY) ||
+    (playerPositionX == opponentPositionX &&
+      playerPositionY - 10 == opponentPositionY) ||
+    (playerPositionX - 10 == opponentPositionX &&
+      playerPositionY == opponentPositionY) ||
+    (playerPositionX == opponentPositionX &&
+      playerPositionY + 10 == opponentPositionY) ||
+    (playerPositionX + 10 == opponentPositionX &&
+      playerPositionY == opponentPositionY)
   ) {
     gameOver();
   }
@@ -124,31 +151,35 @@ setInterval(() => {
   // Update stats: [ gold | score | highscore | Tempo ]
   document.getElementById("goldValue").innerHTML = "GOLD : " + gold;
   document.getElementById("scoreValue").innerHTML = "SCORE : " + score;
-  document.getElementById("highscoreValue").innerHTML = "HIGHSCORE : " + highscore;
+  document.getElementById("highscoreValue").innerHTML =
+    "HIGHSCORE : " + highscore;
   document.getElementById("tempoValue").innerHTML = "Tempo : " + opponentTempo;
 
   if (score > highscore) {
     highscore = score;
   }
 
-  opponentTempo = (400 / intervalSpeed * 100).toFixed(2);
-
+  opponentTempo = ((400 / intervalSpeed) * 100).toFixed(2);
 }, 15);
 
 // Makes the opponent following you
 function oppnentChasingYou() {
   if (openNameList == false) {
     if (opponentPositionX > playerPositionX) {
-      document.getElementById("opponent").style.top = opponentPositionX - 10 + 'px';
+      document.getElementById("opponent").style.top =
+        opponentPositionX - 10 + "px";
     }
     if (opponentPositionX < playerPositionX) {
-      document.getElementById("opponent").style.top = opponentPositionX + 10 + 'px';
+      document.getElementById("opponent").style.top =
+        opponentPositionX + 10 + "px";
     }
     if (opponentPositionY > playerPositionY) {
-      document.getElementById("opponent").style.left = opponentPositionY - 10 + 'px';
+      document.getElementById("opponent").style.left =
+        opponentPositionY - 10 + "px";
     }
     if (opponentPositionY < playerPositionY) {
-      document.getElementById("opponent").style.left = opponentPositionY + 10 + 'px';
+      document.getElementById("opponent").style.left =
+        opponentPositionY + 10 + "px";
     }
   }
 }

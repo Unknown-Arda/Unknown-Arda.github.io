@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <head>
 
     <meta charset="UTF-8">
@@ -11,14 +12,14 @@
 
 </head>
 
-<body>
-    <div class="version">Version: 1.4.2</div>
+<body onload="loadScore()">
+    <div class="version">Version: 1.4.9</div>
 
     <header class="stats-shop">
 
         <br> <br> <br> <br> <br> <br>
         <div id="goldValue" class="statsGold">GOLD :</div>
-        <div id="scoreValue" class="statsScore">SCORE :</div> 
+        <div id="scoreValue" class="statsScore">SCORE :</div>
         <div id="highscoreValue" class="statsHighScore">HIGHSCORE :</div>
         <div id="tempoValue" class="statsTempo"></div>
         <div class="pressF2">Press F2 to change your Name!</div>
@@ -30,27 +31,42 @@
         </div>
 
         <div class="blueDiv">
-            <button class="blueSkin" onclick="blueSkin()"></button>
+            <button class="blueSkin" onclick="blueSkin(),saveScore()"></button>
             <p class="blue" id="blue">100 Gold</p>
         </div>
 
         <div class="pinkDiv">
-            <button class="pinkSkin" onclick="pinkSkin()"></button>
+            <button class="pinkSkin" onclick="pinkSkin(),saveScore()"></button>
             <p class="pink" id="pink">100 Gold</p>
         </div>
 
         <div class="redDiv">
-            <button class="redSkin" onclick="redSkin()"></button>
+            <button class="redSkin" onclick="redSkin(),saveScore()"></button>
             <p class="red" id="red">100 Gold</p>
         </div>
-        
-        <div class="dogDiv">
-            <button class="dogSkin" onclick="dogSkin()"></button>
-            <p class="dog" id="dog">1000 Gold</p>
+
+        <div class="bearDiv">
+            <button class="bearSkin" onclick="bearSkin(),saveScore()"></button>
+            <p class="bear" id="bear">500 Gold</p>
+        </div>
+
+        <div class="jamJitzuDiv">
+            <button class="jamJitzuSkin" onclick="jamJitzuSkin(),saveScore()"></button>
+            <p class="jamJitzu" id="jamJitzu">1000 Gold</p>
+        </div>
+
+        <div class="walkingVDiv">
+            <button class="walkingVSkin" onclick="walkingVSkin(),saveScore()"></button>
+            <p class="walkingV" id="walkingV">---------</p>
+        </div>
+
+        <div class="crazyDiv">
+            <button class="crazySkin" onclick="crazySkin(),saveScore()"></button>
+            <p class="crazy" id="crazy">---------</p>
         </div>
 
         <br> <br> <br>
-        
+
     </header>
 
     <div class="gameBorder">
@@ -96,3 +112,4 @@
 <script src="./Javascript/updatePosition.js"></script>
 <script src="./Javascript/gameOver.js"></script>
 <script src="/Javascript/changeName.js"></script>
+<script src="/Javascript/Cookie.js"></script>
