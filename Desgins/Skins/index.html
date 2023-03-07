@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FirstSurvive</title>
+
+    <link rel="icon" type="image/png" href="./Andere/FS-ico.png">
+
+</head>
+
+<body onload="loadScore()">
+    <div class="version">Version: 1.5.1</div>
+
+    <header class="stats-shop">
+
+        <br> <br> <br> <br> <br> <br>
+        <div id="goldValue" class="statsGold">GOLD :</div>
+        <div id="scoreValue" class="statsScore">SCORE :</div>
+        <div id="highscoreValue" class="statsHighScore">HIGHSCORE :</div>
+        <div id="tempoValue" class="statsTempo"></div>
+        <div class="pressF2">Press F2 to change your Name!</div>
+        <hr class="statsHR">
+
+        <div class="whiteDiv">
+            <button class="whiteSkin" onclick="whiteSkin()"></button>
+            <p class="white">White</p>
+        </div>
+
+        <div class="blueDiv">
+            <button class="blueSkin" onclick="blueSkin(),saveScore()"></button>
+            <p class="blue" id="blue">100 Gold</p>
+        </div>
+
+        <div class="pinkDiv">
+            <button class="pinkSkin" onclick="pinkSkin(),saveScore()"></button>
+            <p class="pink" id="pink">100 Gold</p>
+        </div>
+
+        <div class="redDiv">
+            <button class="redSkin" onclick="redSkin(),saveScore()"></button>
+            <p class="red" id="red">100 Gold</p>
+        </div>
+
+        <div class="bearDiv">
+            <button class="bearSkin" onclick="bearSkin(),saveScore()"></button>
+            <p class="bear" id="bear">500 Gold</p>
+        </div>
+
+        <div class="jamJitzuDiv">
+            <button class="jamJitzuSkin" onclick="jamJitzuSkin(),saveScore()"></button>
+            <p class="jamJitzu" id="jamJitzu">1000 Gold</p>
+        </div>
+
+        <div class="walkingVDiv">
+            <button class="walkingVSkin" onclick="walkingVSkin(),saveScore()"></button>
+            <p class="walkingV" id="walkingV"></p>
+        </div>
+
+        <div class="crazyDiv">
+            <button class="crazySkin" onclick="crazySkin(),saveScore()"></button>
+            <p class="crazy" id="crazy"></p>
+        </div>
+
+        <br> <br> <br>
+
+    </header>
+
+    <div class="gameBorder">
+        <div id="player" class="player">
+            <h6 id="playerName"></h6>
+        </div>
+        <div id="gold" class="gold"></div>
+        <div class="jewel" id="jewel"></div>
+        <div class="flyingCoin" id="FC"></div>
+        <div id="opponent" class="opponent"></div>
+        <div class="bulletSpawner"></div>
+        <div class="bullet" id="bullet1"></div>
+        <div class="bullet" id="bullet2"></div>
+        <div class="bullet" id="bullet3"></div>
+        <div class="bullet" id="bullet4"></div>
+        <div class="bullet" id="bullet5"></div>
+
+        <div class="nameTag" id="nameTagDiv">
+            <h1 class="nameTagTitle">Game Tag:</h1>
+            <label for="nameTag"></label>
+            <input type="text" id="nameTag" name="nameTag">
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+
+<!-- Shortcut -->
+<link rel="stylesheet" href="./CSS/FS.css">
+<link rel="stylesheet" href="./CSS/matchfield.css">
+<link rel="stylesheet" href="./CSS/skin.css">
+<script src="./Javascript/FS.js"></script>
+<script src="./Javascript/shopFS.js"></script>
+<script src="./Javascript/jewel.js"></script>
+<script src="./Javascript/flyingCoin.js"></script>
+<script src="./Javascript/bullets/bullet.js"></script>
+<script src="./Javascript/bullets/bullet2.js"></script>
+<script src="./Javascript/bullets/bullet3.js"></script>
+<script src="./Javascript/bullets/bullet4.js"></script>
+<script src="./Javascript/bullets/bullet5.js"></script>
+<script src="./Javascript/updatePosition.js"></script>
+<script src="./Javascript/gameOver.js"></script>
+<script src="/Javascript/changeName.js"></script>
+<script src="/Javascript/Cookie.js"></script>

@@ -1,0 +1,122 @@
+.gameBorder {
+    
+    width: 720px;
+    height: 480px;
+    zoom:150%;
+    background-color: rgb(69, 153, 80);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.player{
+
+    background-image: url(../Desgins/Skins/whiteSkin.png);
+    background-size: cover;
+    image-rendering: pixelated;
+    width: 20px;
+    height: 20px;
+    left:10px;
+    top:10px;
+    position: absolute;
+    background-size: cover;
+    image-rendering: pixelated;
+}
+
+.gold{
+
+    background-image: url(../Desgins/gold.png);
+    background-size: cover;
+    image-rendering: pixelated;
+    width: 10px;
+    height: 10px;
+    left: 10px;
+    position: absolute;
+}
+
+.opponent {
+
+    background-color: rgb(0, 0, 0);
+    width: 20px;
+    height: 20px;
+    left:690px;
+    top:450px;
+    position: absolute;
+}
+
+.bullet {
+
+    background-image: url(../Desgins/bullet.png);
+    background-size: cover;
+    image-rendering: pixelated;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left:710px;
+    top:500px;
+    z-index: 0;
+}
+
+.jewel {
+
+    background-image: url(/Desgins/jewel.anim/jewelanim1.png);
+    background-size: cover;
+    image-rendering: pixelated;
+    height: 10px;
+    width: 10px;
+    left: 710px;
+    top: 500px;
+    position: absolute;
+}
+
+.flyingCoin {
+
+    background-color: aqua;
+    background-size: cover;
+    image-rendering: pixelated;
+    height: 10px;
+    width: 10px;
+    left: 710px;
+    top: 500px;
+    position: absolute;
+}
+
+.nameTag {
+
+    background-color:rgb(120, 148, 124);
+    width: 288px;
+    height: 192px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border: 7.5px dashed rgb(0, 0, 0);
+    display: none;
+}
+
+input {
+
+    top: 37.5%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.nameTagTitle {
+
+    font-size: 20px;
+    top: 17.5%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-family: fantasy;
+}
+
+h6 {
+
+    left: 50%;
+    top: -175%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}

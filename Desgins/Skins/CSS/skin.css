@@ -1,0 +1,207 @@
+.whiteSkin {
+
+    height: 20px;
+    width: 20px;
+    zoom: 130%;
+    background-image: url(../Desgins/Skins/whiteSkin.png);
+    background-size: cover;
+    image-rendering: pixelated;
+    border:none;
+
+}.whiteSkin:hover {
+
+    cursor:pointer;
+    
+}.white {
+
+    color:aliceblue;
+    transform: translate(-20%);
+    margin-top: 0;
+
+}.whiteDiv {
+
+    position: absolute;
+    left: 50px;
+}
+
+.blueSkin {
+
+    height: 20px;
+    width: 20px;
+    zoom: 130%;
+    background-image: url(../Desgins/Skins/blueSkin.png);
+    background-size: cover;
+    image-rendering: pixelated;
+    border:none;
+
+}.blueSkin:hover {
+
+    cursor:pointer;
+
+}.blue {
+
+    color:aliceblue;
+    transform: translate(-25%);
+    margin-top: 0;
+
+}.blueDiv {
+
+    position: absolute;
+    left: 170px;
+}
+
+.pinkSkin {
+
+    height: 20px;
+    width: 20px;
+    zoom: 130%;
+    background-image: url(../Desgins/Skins/pinkSkin.png);
+    background-size: cover;
+    image-rendering: pixelated;
+    border:none;
+
+}.pinkSkin:hover {
+
+    cursor:pointer;
+
+}.pink {
+
+    color:aliceblue;
+    transform: translate(-25%);
+    margin-top: 0;
+
+}.pinkDiv {
+
+    position: absolute;
+    left: 290px;
+}
+
+.redSkin {
+
+    height: 20px;
+    width: 20px;
+    zoom: 130%;
+    background-image: url(../Desgins/Skins/redSkin.png);
+    background-size: cover;
+    image-rendering: pixelated;
+    border:none;
+
+}.redSkin:hover {
+
+    cursor:pointer;
+
+}.red {
+
+    color:aliceblue;
+    transform: translate(-25%);
+    margin-top: 0;
+
+}.redDiv {
+
+    position: absolute;
+    left: 410px;
+}
+
+.bearSkin {
+
+    height: 20px;
+    width: 20px;
+    zoom: 130%;
+    background-image: url(/Desgins/Skins/bearSkin.png);
+    background-size: cover;
+    image-rendering: pixelated;
+    border:none;
+
+}.bearSkin:hover {
+
+    cursor:pointer;
+
+}.bear {
+
+    color:aliceblue;
+    transform: translate(-25%);
+    margin-top: 0;
+
+}.bearDiv {
+
+    position: absolute;
+    left: 530px;
+}
+
+.jamJitzuSkin {
+
+    height: 20px;
+    width: 20px;
+    zoom: 130%;
+    background-image: url(/Desgins/Skins/JamJitzuSkin.png);
+    background-size: cover;
+    image-rendering: pixelated;
+    border:none;
+
+}.jamJitzuSkin:hover {
+
+    cursor:pointer;
+
+}.jamJitzu {
+
+    color:aliceblue;
+    transform: translate(-25%);
+    margin-top: 0;
+
+}.jamJitzuDiv {
+
+    position: absolute;
+    left: 650px;
+}
+
+.walkingVSkin {
+
+    height: 20px;
+    width: 20px;
+    zoom: 130%;
+    background-image: url(/Desgins/Skins/WalkingVSkin.png);
+    background-size: cover;
+    image-rendering: pixelated;
+    border:none;
+
+}.walkingVSkin:hover {
+
+    cursor:pointer;
+
+}.walkingV {
+
+    color:aliceblue;
+    transform: translate(-25%);
+    margin-top: 0;
+
+}.walkingVDiv {
+
+    position: absolute;
+    left: 770px;
+}
+
+.crazySkin {
+
+    height: 20px;
+    width: 20px;
+    zoom: 130%;
+    background-image: url(/Desgins/Skins/crazySkin.png);
+    background-size: cover;
+    image-rendering: pixelated;
+    border:none;
+
+}.crazySkin:hover {
+
+    cursor:pointer;
+
+}.crazy {
+
+    color:aliceblue;
+    transform: translate(-25%);
+    margin-top: 0;
+
+}.crazyDiv {
+
+    position: absolute;
+    left: 890px;
+}
