@@ -5,6 +5,12 @@ let highscoreSAVED = getScore("highscoreSAVED");
 let ownBlueSAVED = getScore("ownBlueSAVED");
 let ownPinkSAVED = getScore("ownPinkSAVED");
 let ownRedSAVED = getScore("ownRedSAVED");
+let ownBearSAVED = getScore("ownBearSAVED");
+let ownJamJitzuSAVED = getScore("ownJamJitzuSAVED");
+let ownWalkingVSAVED = getScore("ownWalkingVSAVED");
+let ownCrazySAVED = getScore("ownCrazySAVED");
+//name
+let usernameSAVED = getScore("usernameSAVED");
 
 function loadScore() {
   /* load stats */
@@ -15,6 +21,12 @@ function loadScore() {
   ownBlue = ownBlueSAVED;
   ownPink = ownPinkSAVED;
   ownRed = ownRedSAVED;
+  ownBear = ownBearSAVED;
+  ownJamJitzu = ownJamJitzuSAVED;
+  ownWalkingV = ownWalkingVSAVED;
+  ownCrazy = ownCrazySAVED;
+  username = usernameSAVED;
+  playerName.innerText = username;
 
   if (ownBlue == "true") {
     document.getElementById("blue").innerHTML = "Blue";
@@ -24,6 +36,18 @@ function loadScore() {
   }
   if (ownRed == "true") {
     document.getElementById("red").innerHTML = "Red";
+  }
+  if (ownBear == "true") {
+    document.getElementById("bear").innerHTML = "Bear";
+  }
+  if (ownJamJitzu == "true") {
+    document.getElementById("jamJitzu").innerHTML = "Jam Jitzu";
+  }
+  if (ownWalkingV == "true") {
+    document.getElementById("walkingV").innerHTML = "Speed";
+  }
+  if (ownCrazy == "true") {
+    document.getElementById("crazy").innerHTML = "Went crazy";
   }
 }
 
@@ -76,7 +100,7 @@ function saveScore() {
   }
   setScore("goldSAVED", gold);
 
-  console.log("score saved!");
+  // console.log("score saved!");
 
   //own blue
   if (ownBlue == "true") {
@@ -96,4 +120,32 @@ function saveScore() {
   } else {
     setScore("ownRedSAVED", "false");
   }
+  // own red
+  if (ownBear == "true") {
+    setScore("ownBearSAVED", "true");
+  } else {
+    setScore("ownBearSAVED", "false");
+  }
+  // own red
+  if (ownJamJitzu == "true") {
+    setScore("ownJamJitzuSAVED", "true");
+  } else {
+    setScore("ownJamJitzuSAVED", "false");
+  }
+  // own red
+  if (ownWalkingV == "true") {
+    setScore("ownWalkingVSAVED", "true");
+  } else {
+    setScore("ownWalkingVSAVED", "false");
+  }
+  // own red
+  if (ownCrazy == "true") {
+    setScore("ownCrazySAVED", "true");
+  } else {
+    setScore("ownCrazySAVED", "false");
+  }
+
+  // own red
+  setScore("usernameSAVED", username);
+  console.log("save name:" + username);
 }

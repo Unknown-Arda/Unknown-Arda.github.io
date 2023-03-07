@@ -112,17 +112,19 @@ function crazySkin() {
 }
 
 setInterval(() => {
-
   if (walkingValue < 10000) {
     document.getElementById("walkingV").innerHTML = 10000 - walkingValue;
-  } else {
+  } else if (ownWalkingV == "false") {
+    walkingValue = "true";
     document.getElementById("walkingV").innerHTML = "Speed";
+    saveScore();
   }
 
   if (highscore < 199) {
     document.getElementById("crazy").innerHTML = 200 - highscore;
-  } else {
+  } else if (ownCrazy == "false") {
+    ownCrazy = "true";
     document.getElementById("crazy").innerHTML = "Went crazy";
+    saveScore();
   }
-
 }, 50);

@@ -1,6 +1,7 @@
 body {
 
     background-color:rgb(42, 100, 49);
+    user-select: none;
 }
 
 .stats-shop {

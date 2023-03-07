@@ -2,6 +2,7 @@ placeGold();
 
 let openNameList = false;
 let walkingValue = 0;
+let username = "187";
 
 // Movement [ Player ]
 let player = document.getElementById("player");
@@ -58,7 +59,6 @@ window.addEventListener("keydown", (e) => {
     document.getElementById("player").style.top = "460px";
     walkingValue -= 1;
   }
-  
 });
 
 // Places the gold [ Generates variable with random cordinates in the matchfield to place them random ]
@@ -89,7 +89,6 @@ let intervalId = setInterval(oppnentChasingYou, intervalSpeed);
 let opponentTempo = 0;
 
 setInterval(() => {
-
   // functions to update position
   updatePlayerPosition();
   updateGoldPosition();
